@@ -6,20 +6,36 @@ header {
     align-items: center;
     background-color: $color-primary;
     height: 5rem;
+    font-size: 1.4rem;
 }
 
 //////////////////////////////////////////////////
 ////// logo
 .logo {
-    height: 3.25rem
+    height: 2.75rem;
+    margin: 0 2rem;
 }
 
 //////////////////////////////////////////////////
 ////// Menu
 .menu {
     display: flex;
+    margin-left: -50rem;
     &__item {
-        &__link {}
+        padding: 0 1.8rem;
+        list-style-type: none;
+        &__link {
+            color: $color-grey-1;
+            text-decoration: none;
+            font-size: 1.4rem;
+            opacity: 0.6;
+        }
+    }
+    &>.active {
+        &>a {
+            opacity: 1;
+            font-weight: 700;
+        }
     }
 }
 
@@ -27,23 +43,57 @@ header {
 ////// search
 .search {
     display: flex;
-    background-color: orangered;
     align-items: center;
-    flex: 0 0 20%;
+    justify-content: center;
+    margin-left: -60rem;
+    flex: 0 0 30%;
     &__input {
         font-family: inherit;
         font-size: inherit;
         color: inherit;
         border: none;
-        background-color: white;
-        padding: .7rem 2rem;
+        background-color: $color-grey-1;
+        padding: .3rem 2rem;
         border-radius: 100px;
-        width: 80%;
+        width: 60%;
+        transition: all .2s;
+        &::-webkit-input-placeholder {
+            /* Chrome/Opera/Safari */
+            font-weight: 100;
+            color: #C9C7CE;
+        }
+        &::-moz-placeholder {
+            /* Firefox 19+ */
+            font-weight: 100;
+            color: #C9C7CE;
+        }
+        &:-ms-input-placeholder {
+            /* IE 10+ */
+            font-weight: 100;
+            color: #C9C7CE;
+        }
+        &:-moz-placeholder {
+            /* Firefox 18- */
+            font-weight: 100;
+            color: #C9C7CE;
+        }
     }
-    &__button {}
+    &__button {
+        border: none;
+        background-color: $color-grey-1;
+        margin-left: -3rem;
+        margin-top: .1rem;
+        &:focus {
+            outline: none;
+        }
+        &:active {
+            transform: translateY(2px)
+        }
+    }
     &__icon {
-        height: 2rem;
-        width: 2rem;
+        height: 1.8rem;
+        width: 1.8rem;
+        fill: #C9C7CE;
     }
 }
 
@@ -51,15 +101,41 @@ header {
 ////// User nav
 .user-nav {
     display: flex;
+    align-self: stretch;
     align-items: center;
-    &__icon-box {}
-    &__nav-icon {
-        height: 2.25rem;
-        width: 2.25rem;
-        fill: white;
+    margin-right: 2rem;
+    &>* {
+        padding: 0 1rem;
+        cursor: pointer;
+        height: 100%;
+        display: flex;
+        align-items: center;
     }
-    &__notification {}
-    &__user {}
+    &>*:hover {
+        background-color: darken($color-primary, 5%)
+    }
+    &__icon-box {
+        position: relative;
+    }
+    &__nav-icon {
+        height: 2rem;
+        width: 2rem;
+        fill: $color-grey-1;
+    }
+    &__notification {
+        font-size: .9rem;
+        height: 1.7rem;
+        width: 1.7rem;
+        border-radius: 50%;
+        background-color: $color-primary-red;
+        color: white;
+        position: absolute;
+        top: 1rem;
+        left: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     &__user-photo {
         height: 3.75rem;
         border-radius: 50%;
