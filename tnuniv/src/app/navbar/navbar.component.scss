@@ -59,7 +59,7 @@ header {
         transition: all .2s;
         &::-webkit-input-placeholder {
             /* Chrome/Opera/Safari */
-            font-weight: 100;
+            font-weight: 300;
             color: #C9C7CE;
         }
         &::-moz-placeholder {
@@ -118,8 +118,8 @@ header {
         position: relative;
     }
     &__nav-icon {
-        height: 2rem;
-        width: 2rem;
+        height: 1.8rem;
+        width: 1.8rem;
         fill: $color-grey-1;
     }
     &__notification {
@@ -129,7 +129,7 @@ header {
         width: 1.7rem;
         border-radius: 50%;
         background-color: $color-primary-red;
-        color: white;
+        color: $color-grey-1;
         position: absolute;
         top: 1rem;
         left: 2rem;
