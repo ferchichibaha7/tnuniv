@@ -20,8 +20,9 @@ header {
 //////////////////////////////////////////////////
 ////// Menu
 .menu {
+    margin-top: .6rem;
     display: flex;
-    margin-left: -40rem;
+    margin-left: -45rem;
     flex: 0 0 20%;
     &__item {
         padding: 0 1.8rem;
