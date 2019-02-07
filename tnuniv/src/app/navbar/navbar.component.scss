@@ -13,14 +13,16 @@ header {
 ////// logo
 .logo {
     height: 2.75rem;
-    margin: 0 2rem;
+    margin-left: 2rem;
+    flex: 0 0;
 }
 
 //////////////////////////////////////////////////
 ////// Menu
 .menu {
     display: flex;
-    margin-left: -50rem;
+    margin-left: -40rem;
+    flex: 0 0 20%;
     &__item {
         padding: 0 1.8rem;
         list-style-type: none;
