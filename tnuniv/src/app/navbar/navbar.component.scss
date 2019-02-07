@@ -1,0 +1,67 @@
+@import 'variables';
+@import 'mixins';
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-primary;
+    height: 5rem;
+}
+
+//////////////////////////////////////////////////
+////// logo
+.logo {
+    height: 3.25rem
+}
+
+//////////////////////////////////////////////////
+////// Menu
+.menu {
+    display: flex;
+    &__item {
+        &__link {}
+    }
+}
+
+//////////////////////////////////////////////////
+////// search
+.search {
+    display: flex;
+    background-color: orangered;
+    align-items: center;
+    flex: 0 0 20%;
+    &__input {
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        border: none;
+        background-color: white;
+        padding: .7rem 2rem;
+        border-radius: 100px;
+        width: 80%;
+    }
+    &__button {}
+    &__icon {
+        height: 2rem;
+        width: 2rem;
+    }
+}
+
+//////////////////////////////////////////////////
+////// User nav
+.user-nav {
+    display: flex;
+    align-items: center;
+    &__icon-box {}
+    &__nav-icon {
+        height: 2.25rem;
+        width: 2.25rem;
+        fill: white;
+    }
+    &__notification {}
+    &__user {}
+    &__user-photo {
+        height: 3.75rem;
+        border-radius: 50%;
+    }
+}
