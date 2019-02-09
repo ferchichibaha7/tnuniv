@@ -7,39 +7,6 @@
     color: white;
     position: relative;
     margin: 30px;
-    &__elm {
-        display: flex;
-        align-items: center;
-        height: 70px;
-        margin: 1.5rem;
-        margin-bottom: -2rem;
-        position: relative;
-        cursor: pointer;
-        &__icon {
-            position: relative;
-        }
-        &__img {
-            height: 3.5rem;
-            width: 3.5rem;
-        }
-        &__desc {
-            font-size: 1.25rem;
-            margin: 0 2rem;
-        }
-        &__name {}
-        &__count {
-            opacity: .5;
-            &__nmbr {
-                margin-right: .5rem;
-            }
-        }
-        &__new {
-            position: absolute;
-            top: 40%;
-            right: 0rem;
-            opacity: .5;
-        }
-    }
 }
 
 .subj-card::before {
@@ -50,8 +17,4 @@
     width: 6.20rem;
     background-color: $color-primary-2;
     border-radius: 5px 0 0 5px;
-}
-
-.subj-card::before::hover {
-    width: 20rem;
 }
