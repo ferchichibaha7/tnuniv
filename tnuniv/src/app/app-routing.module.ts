@@ -5,7 +5,7 @@ import { HomeComponent } from './home/home.component';
 
 
 const routes: Routes = [
-  {path:'findfriends',component:FindFriendsComponent},
+  {path:'find-friends',component:FindFriendsComponent},
   {path:'home',component:HomeComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'}
 
