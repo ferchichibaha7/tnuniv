@@ -7,7 +7,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { SubjComponent } from './home/subj/subj.component';
-import { ElementComponent } from './home/subj/element/element.component'
+import { ElementComponent } from './home/subj/element/element.component';
+import { NewsComponent } from './home/news/news.component';
+import { NewsElmComponent } from './home/news/news-elm/news-elm.component'
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { ElementComponent } from './home/subj/element/element.component'
     NavbarComponent,
     HomeComponent,
     SubjComponent,
-    ElementComponent
+    ElementComponent,
+    NewsComponent,
+    NewsElmComponent
   ],
   imports: [
     BrowserModule,

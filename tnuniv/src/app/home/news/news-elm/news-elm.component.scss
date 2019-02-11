@@ -1,0 +1,21 @@
+    @import './variables';
+    @import './mixins';
+    .news-elm {
+        display: flex;
+        padding: 1.5rem;
+        &__news-icon {
+            flex-grow: 0;
+            flex-shrink: 0;
+            width: 2rem;
+            height: 2rem;
+            fill: $color-grey-2;
+            margin-right: 1.25rem;
+            opacity: 0.8;
+        }
+        &__news-content {
+            margin-top: -5px;
+            color: $color-grey-2;
+            font-size: 1.25rem;
+            opacity: 0.9;
+        }
+    }

@@ -1,0 +1,17 @@
+@import './variables';
+@import './mixins';
+.news-card {
+    background-color: white;
+    border-radius: 5px;
+    width: 20%;
+    color: $color-text-dark-1;
+    position: relative;
+    margin: 30px;
+    margin-top: 5rem;
+    &__title {
+        padding: 1rem;
+        font-size: 1.25rem;
+        font-weight: 600;
+        border-bottom: 0.5px solid rgba(1, 1, 1, 0.1);
+    }
+}
