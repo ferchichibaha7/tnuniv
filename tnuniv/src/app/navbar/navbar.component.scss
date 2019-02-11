@@ -7,6 +7,13 @@ header {
     background-color: $color-primary;
     height: 5rem;
     font-size: 1.4rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    -webkit-box-shadow: 0px -7px 22px 1px rgba(97, 97, 97, 0.4);
+    -moz-box-shadow: 0px -7px 22px 1px rgba(97, 97, 97, 0.4);
+    box-shadow: 0px -7px 22px 1px rgba(97, 97, 97, 0.4);
 }
 
 //////////////////////////////////////////////////
@@ -22,8 +29,7 @@ header {
 .menu {
     margin-top: .6rem;
     display: flex;
-    margin-left: -45rem;
-    flex: 0 0 20%;
+    flex: 0 0 35%;
     &__item {
         padding: 0 1.8rem;
         list-style-type: none;
@@ -32,12 +38,11 @@ header {
             text-decoration: none;
             font-size: 1.4rem;
             opacity: 0.6;
-        }
-    }
-    &>.active {
-        &>a {
-            opacity: 1;
-            font-weight: 700;
+            transition: all 0.4s ease;
+            &.active {
+                opacity: 1;
+                font-weight: 700;
+            }
         }
     }
 }
@@ -48,8 +53,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: -60rem;
-    flex: 0 0 30%;
+    flex: 0 0 35%;
     &__input {
         font-family: inherit;
         font-size: inherit;
@@ -59,7 +63,7 @@ header {
         padding: .3rem 2rem;
         border-radius: 100px;
         width: 60%;
-        transition: all .2s;
+        transition: all .1s;
         &::-webkit-input-placeholder {
             /* Chrome/Opera/Safari */
             font-weight: 300;

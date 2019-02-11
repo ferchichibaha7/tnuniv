@@ -2,11 +2,11 @@
     <img src="assets/img/logo.png" alt="logo" class="logo">
 
     <ul class="menu">
-        <li class="menu__item active">
-            <a href="#" class="menu__item__link">Home</a>
+        <li class="menu__item ">
+            <a [routerLink]="['/home']" routerLinkActive="active" class="menu__item__link">Home</a>
         </li>
         <li class="menu__item">
-            <a href="#" class="menu__item__link">Find Friends</a>
+            <a [routerLink]="['/findfriends']" routerLinkActive="active" class="menu__item__link">Find Friends</a>
         </li>
     </ul>
     <form action="#" class="search">
