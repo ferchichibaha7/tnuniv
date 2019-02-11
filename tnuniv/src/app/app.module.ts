@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule,RoutingComponent } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
 import { NavbarComponent } from './navbar/navbar.component';
 
 import { SubjComponent } from './home/subj/subj.component';
 import { ElementComponent } from './home/subj/element/element.component';
 import { NewsComponent } from './home/news/news.component';
 import { NewsElmComponent } from './home/news/news-elm/news-elm.component';
+import { DialogeComponent } from './home/news/news-elm/dialoge/dialoge.component';
 
 @NgModule({
   declarations: [
@@ -21,13 +23,16 @@ import { NewsElmComponent } from './home/news/news-elm/news-elm.component';
     NewsComponent,
     NewsElmComponent,
     RoutingComponent,
+    DialogeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+
   ],
+  entryComponents:[ DialogeComponent,],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -13,9 +13,22 @@
             opacity: 0.8;
         }
         &__news-content {
+            border: none;
+            background-color: transparent;
+            text-align: left;
             margin-top: -5px;
             color: $color-grey-2;
             font-size: 1.25rem;
-            opacity: 0.9;
+            opacity: 0.8;
+            border: 0;
+            outline: none;
+            &:hover {
+                opacity: 1;
+                color: $color-text-dark-1;
+                text-decoration: none;
+                border: 0;
+                outline: none;
+                cursor: pointer;
+            }
         }
     }
