@@ -22,6 +22,7 @@
             opacity: 0.8;
             border: 0;
             outline: none;
+            transition: all 0.4s;
             &:hover {
                 opacity: 1;
                 color: $color-text-dark-1;

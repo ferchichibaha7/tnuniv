@@ -16,7 +16,7 @@ export class NewsElmComponent implements OnInit {
   }
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogeComponent, {
-
+      width: '700px',
     });
 
     dialogRef.afterClosed().subscribe(result => {
