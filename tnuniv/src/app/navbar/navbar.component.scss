@@ -123,6 +123,9 @@ header {
     }
     &__icon-box {
         position: relative;
+        border: none;
+        background-color: transparent;
+        outline: none;
     }
     &__nav-icon {
         height: 1.8rem;

@@ -5,8 +5,8 @@ import { HomeComponent } from './home/home.component';
 
 
 const routes: Routes = [
-  {path:'find-friends',component:FindFriendsComponent},
-  {path:'home',component:HomeComponent},
+  {path: 'find-friends', component: FindFriendsComponent},
+  {path: 'home', component: HomeComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'}
 
 ];
@@ -16,4 +16,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const RoutingComponent=[FindFriendsComponent,HomeComponent]
+export const RoutingComponent = [ FindFriendsComponent, HomeComponent];
