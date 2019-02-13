@@ -1,16 +1,26 @@
 <div class="add-post-card clearfix">
     <div class="add-post-card__title">Make Post</div>
     <form action="#" class="add-post-card__form">
-        <textarea rows="1" wrap="soft" class="add-post-card__form__input" placeholder="Share Something"></textarea>
-        <div class="buttom-menu">
-            <button mat-flat-button class="add-post-card__form__post-button">Post</button>
 
-            <div class="add-post-card__form__image-upload">
-                <label for="file-input">
-              <i class="material-icons add-post-card__form__image-upload__icon">
-                add_to_photos
-                </i> </label><input id="file-input" type="file" />
+        <textarea rows="1" wrap="soft" class="add-post-card__form__input" placeholder="Share Something"></textarea>
+
+        <div class="buttom-menu">
+
+            <img (click)="url2.splice(i, 1)" *ngFor='let url of url2 ; let i = index' id="blah" [src]="url" />
+
+            <div class="buttons">
+                <button mat-flat-button class="add-post-card__form__post-button">Post</button>
+
+                <div class="add-post-card__form__image-upload">
+                    <label for="file-input">
+                  <i class="material-icons add-post-card__form__image-upload__icon">
+                    add_to_photos
+                    </i> </label>
+                    <input (change)="onSelectFile($event)" id="file-input" type="file" multiple />
+
+                </div>
             </div>
+
         </div>
 
     </form>

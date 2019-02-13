@@ -7,6 +7,9 @@ declare var $: any;
   styleUrls: ['./add-post.component.scss']
 })
 export class AddPostComponent implements OnInit {
+  url2 = [];
+  url1 = [];
+
   constructor() {
 
   }
@@ -27,7 +30,8 @@ export class AddPostComponent implements OnInit {
     const container = $('.add-post-card');
     const target = $('.buttom-menu');
 
-    if (!container.is(e.target) && container.has(e.target).length === 0) {
+// tslint:disable-next-line: triple-equals
+    if (!container.is(e.target) && container.has(e.target).length === 0 && this.url2.length == 0) {
 
       target.hide();
  }
@@ -36,8 +40,50 @@ export class AddPostComponent implements OnInit {
 
 
 
+   if (this.url2.length === 0 ) {
+  $('#blah').hide(); }
+}
 
 
-}}
+
+
+
+
+
+
+
+
+
+onSelectFile(event: any) {
+  if (event.target.files && event.target.files[0]) {
+      const filesAmount = event.target.files.length;
+      for (let i = 0; i < 5; i++) {
+              const reader = new FileReader();
+
+
+// tslint:disable-next-line: no-shadowed-variable
+              reader.onload = (event) => {
+                const fileUrl = (event.target as FileReader).result;
+                this.url2.push(fileUrl);
+              };
+
+              reader.readAsDataURL(event.target.files[i]);
+      }
+      for (let i = 0; i < filesAmount; i++) {
+        const reader = new FileReader();
+// tslint:disable-next-line: no-shadowed-variable
+        reader.onload = (event) => {
+          const fileUrl = (event.target as FileReader).result;
+          this.url1.push(fileUrl);
+        };
+
+        reader.readAsDataURL(event.target.files[i]);
+}
+  }
+}
+
+
+
+}
 
 
