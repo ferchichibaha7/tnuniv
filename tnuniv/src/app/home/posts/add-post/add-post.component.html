@@ -1,15 +1,14 @@
 <div class="add-post-card clearfix">
     <div class="add-post-card__title">Make Post</div>
-    <form action="#" class="add-post-card__form">
+    <form class="add-post-card__form" (submit)="onAddPost()">
 
-        <textarea rows="1" wrap="soft" class="add-post-card__form__input" placeholder="Share Something"></textarea>
+        <textarea rows="1" wrap="soft" class="add-post-card__form__input" placeholder="Share Something" name="content" ngModel></textarea>
 
         <div class="buttom-menu">
-
             <img (click)="url2.splice(i, 1)" *ngFor='let url of url2 ; let i = index' id="blah" [src]="url" />
 
             <div class="buttons">
-                <button mat-flat-button class="add-post-card__form__post-button">Post</button>
+                <button type="submit" mat-raised-button class="add-post-card__form__post-button">Post</button>
 
                 <div class="add-post-card__form__image-upload">
                     <label for="file-input">
@@ -17,10 +16,8 @@
                     add_to_photos
                     </i> </label>
                     <input (change)="onSelectFile($event)" id="file-input" type="file" multiple />
-
                 </div>
             </div>
-
         </div>
 
     </form>

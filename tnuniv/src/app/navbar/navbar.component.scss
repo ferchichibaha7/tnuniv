@@ -101,6 +101,10 @@ header {
         height: 1.8rem;
         width: 1.8rem;
         fill: #C9C7CE;
+        transition: 0.4s;
+        &:hover {
+            fill: rgb(71, 71, 71);
+        }
     }
 }
 
@@ -131,6 +135,7 @@ header {
         height: 1.8rem;
         width: 1.8rem;
         fill: $color-grey-1;
+        viewBox: 0 0 1.8rem 1.8rem
     }
     &__notification {
         font-size: .9rem;

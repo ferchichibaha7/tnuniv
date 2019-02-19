@@ -1,9 +1,4 @@
 <div class="news-card">
     <div class="news-card__title">News</div>
-    <app-news-elm></app-news-elm>
-    <app-news-elm></app-news-elm>
-    <app-news-elm></app-news-elm>
-    <app-news-elm></app-news-elm>
-
-
+    <app-news-elm *ngFor="let neww of news" [new]="neww"></app-news-elm>
 </div>

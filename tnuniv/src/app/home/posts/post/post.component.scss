@@ -1,0 +1,73 @@
+@import './variables';
+@import './mixins';
+.post-card {
+    background-color: white;
+    border-radius: 5px;
+    width: 80%;
+    color: $color-text-dark-1;
+    position: relative;
+    margin-left: 2rem;
+    margin-top: 3rem;
+    padding-bottom: 2rem;
+    &__title {
+        padding: 1rem;
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__user-img-box {
+        margin-right: 1rem;
+        margin-left: 2rem;
+        margin-top: 1rem;
+    }
+    &__user-img {
+        height: 5rem;
+        border-radius: 50%;
+        transition: 0.4s ease;
+        border: none;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    &__user {
+        display: flex;
+        align-items: center;
+    }
+    &__user-name {
+        font-size: 1.25rem;
+        color: #303662;
+        font-weight: 700;
+        opacity: 0.8;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    &__user-type {
+        font-size: 1.25rem;
+        color: #576181;
+        opacity: 0.8;
+    }
+    &__time {
+        margin-top: -2rem;
+        font-size: 1.25rem;
+        color: #576181;
+        opacity: 0.4;
+        margin-right: 2rem;
+    }
+    &__main {
+        margin: 2rem;
+        margin-top: 1rem;
+        font-size: 1.25rem;
+        color: rgb(61, 61, 63);
+        margin-bottom: 3rem;
+    }
+}
+
+#line {
+    width: 50%;
+    opacity: 0.5;
+}

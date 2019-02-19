@@ -37,28 +37,15 @@ export class AddPostComponent implements OnInit {
  }
   });
 // hide and show Post button
-
-
-
    if (this.url2.length === 0 ) {
   $('#blah').hide(); }
 }
-
-
-
-
-
-
-
-
-
-
-
 onSelectFile(event: any) {
   if (event.target.files && event.target.files[0]) {
       const filesAmount = event.target.files.length;
       for (let i = 0; i < 5; i++) {
               const reader = new FileReader();
+
 
 
 // tslint:disable-next-line: no-shadowed-variable
@@ -71,6 +58,8 @@ onSelectFile(event: any) {
       }
       for (let i = 0; i < filesAmount; i++) {
         const reader = new FileReader();
+
+
 // tslint:disable-next-line: no-shadowed-variable
         reader.onload = (event) => {
           const fileUrl = (event.target as FileReader).result;
@@ -79,8 +68,16 @@ onSelectFile(event: any) {
 
         reader.readAsDataURL(event.target.files[i]);
 }
-  }
+         }
 }
+
+onAddPost() {
+
+
+
+
+}
+
 
 
 
