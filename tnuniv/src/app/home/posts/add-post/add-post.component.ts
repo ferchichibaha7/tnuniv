@@ -1,5 +1,10 @@
+import { Post } from './../post.model';
 import { Component, OnInit } from '@angular/core';
 import autosize from 'autosize';
+import { NgForm } from '@angular/forms';
+import { Title } from '@angular/platform-browser';
+import { log } from 'util';
+
 declare var $: any;
 @Component({
   selector: 'app-add-post',
@@ -9,6 +14,7 @@ declare var $: any;
 export class AddPostComponent implements OnInit {
   url2 = [];
   url1 = [];
+  p: Post;
 
   constructor() {
 
@@ -71,9 +77,11 @@ onSelectFile(event: any) {
          }
 }
 
-onAddPost() {
-
-
+onAddPost(form: NgForm) {
+const p: Post = {
+content: form.value.content,
+};
+console.log(p);
 
 
 }

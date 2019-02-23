@@ -7,7 +7,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import * as $ from 'jquery';
 import { FormsModule} from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
-
+import {LocationStrategy, HashLocationStrategy} from '@angular/common';
 import { SubjComponent } from './home/subj/subj.component';
 import { ElementComponent } from './home/subj/element/element.component';
 import { NewsComponent } from './home/news/news.component';
@@ -39,6 +39,6 @@ import { PostComponent } from './home/posts/post/post.component';
   ],
   entryComponents: [DialogeComponent],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent,]
 })
 export class AppModule { }

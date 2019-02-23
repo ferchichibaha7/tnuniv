@@ -1,6 +1,6 @@
 <div class="add-post-card clearfix">
     <div class="add-post-card__title">Make Post</div>
-    <form class="add-post-card__form" (submit)="onAddPost()">
+    <form class="add-post-card__form" (submit)="onAddPost(postform)" #postform="ngForm">
 
         <textarea rows="1" wrap="soft" class="add-post-card__form__input" placeholder="Share Something" name="content" ngModel></textarea>
 
