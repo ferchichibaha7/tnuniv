@@ -1,7 +1,8 @@
 import { MaterialModule } from './material';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AppRoutingModule, RoutingComponent } from './app-routing.module';
+import { AppRoutingModule, RoutingComponent, routes} from './app-routing.module';
+import { Routes, RouterModule,  } from '@angular/router';
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import * as $ from 'jquery';
@@ -32,13 +33,15 @@ import { PostComponent } from './home/posts/post/post.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterModule.forRoot(routes, { useHash: true }),
+
     BrowserAnimationsModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
 
   ],
   entryComponents: [DialogeComponent],
   providers: [],
-  bootstrap: [AppComponent,]
+  bootstrap: [AppComponent, ]
 })
 export class AppModule { }

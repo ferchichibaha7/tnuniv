@@ -4,7 +4,7 @@ import { FindFriendsComponent } from './find-friends/find-friends.component';
 import { HomeComponent } from './home/home.component';
 
 
-const routes: Routes = [
+export  const routes: Routes = [
   {path: 'find-friends', component: FindFriendsComponent},
   {path: 'home', component: HomeComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'}
@@ -17,3 +17,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 export const RoutingComponent = [ FindFriendsComponent, HomeComponent];
+
