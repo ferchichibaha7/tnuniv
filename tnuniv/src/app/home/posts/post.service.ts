@@ -3,12 +3,18 @@ import { Post } from './post.model';
 export class PostService {
 
 
- private posts: Post[] = [];
+public posts: Post[] = [
+   ];
 
 
 
  getPosts() {
+return this.posts;
+ }
 
-  return this.posts;
+
+
+ pushPost(p: Post) {
+   this.posts.unshift(p);
  }
 }

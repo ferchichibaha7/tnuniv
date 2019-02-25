@@ -1,3 +1,4 @@
+import { PostService } from './home/posts/post.service';
 import { MaterialModule } from './material';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -17,6 +18,7 @@ import { DialogeComponent } from './home/news/news-elm/dialoge/dialoge.component
 import { AddPostComponent } from './home/posts/add-post/add-post.component';
 import { PostComponent } from './home/posts/post/post.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,15 +35,13 @@ import { PostComponent } from './home/posts/post/post.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(routes, { useHash: true }),
-
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
 
   ],
   entryComponents: [DialogeComponent],
-  providers: [{provide:LocationStrategy,useClass:HashLocationStrategy}],
+  providers: [PostService],
   bootstrap: [AppComponent, ]
 })
 export class AppModule { }

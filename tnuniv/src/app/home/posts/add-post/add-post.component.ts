@@ -1,9 +1,8 @@
-import { Post } from './../post.model';
 import { Component, OnInit } from '@angular/core';
 import autosize from 'autosize';
 import { NgForm } from '@angular/forms';
-import { Title } from '@angular/platform-browser';
-import { log } from 'util';
+import {PostService } from '../post.service';
+import { Post } from '../post.model';
 
 declare var $: any;
 @Component({
@@ -16,7 +15,7 @@ export class AddPostComponent implements OnInit {
   url1 = [];
   p: Post;
 
-  constructor() {
+  constructor(private postserv: PostService) {
 
   }
 
@@ -78,10 +77,16 @@ onSelectFile(event: any) {
 }
 
 onAddPost(form: NgForm) {
-const p: Post = {
+
+  const p: Post = {
 content: form.value.content,
 };
-console.log(p);
+  this.postserv.pushPost(p);
+  $('.add-post-card__form__input').val('');
+  $('.add-post-card__form__input').height(23);
+
+
+
 
 
 }
