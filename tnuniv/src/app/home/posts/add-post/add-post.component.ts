@@ -3,7 +3,9 @@ import autosize from 'autosize';
 import { NgForm } from '@angular/forms';
 import {PostService } from '../post.service';
 import { Post } from '../post.model';
-
+import { AngularFirestore } from '@angular/fire/firestore';
+import * as firebase from 'firebase/app';
+import 'firebase/database';
 declare var $: any;
 @Component({
   selector: 'app-add-post',
@@ -13,9 +15,12 @@ declare var $: any;
 export class AddPostComponent implements OnInit {
   url2 = [];
   url1 = [];
+  pics = [];
   p: Post;
+  t: any;
 
-  constructor(private postserv: PostService) {
+  constructor(private postserv: PostService,
+              private firestore: AngularFirestore, ) {
 
   }
 
@@ -78,12 +83,24 @@ onSelectFile(event: any) {
 
 onAddPost(form: NgForm) {
 
+if (form.value.content !== '') {
   const p: Post = {
-content: form.value.content,
-};
-  this.postserv.pushPost(p);
+    post_id:this.firestore.createId(),
+    creation_date: firebase.firestore.FieldValue.serverTimestamp(),
+    content: form.value.content,
+
+    };
+
+
+  this.firestore.collection('posts').add(p);
   $('.add-post-card__form__input').val('');
   $('.add-post-card__form__input').height(23);
+  form.value.content = '';
+
+}
+
+
+
 
 
 
@@ -95,5 +112,3 @@ content: form.value.content,
 
 
 }
-
-

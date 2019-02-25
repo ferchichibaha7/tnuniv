@@ -1,4 +1,5 @@
 export interface Post {
-
-  content: string;
+   post_id:string,
+  content: string,
+  creation_date: any,
 }

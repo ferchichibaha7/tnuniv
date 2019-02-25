@@ -1,20 +1,14 @@
 import { Post } from './post.model';
+import { AngularFirestore } from '@angular/fire/firestore';
 
+import { Injectable } from '@angular/core';
+@Injectable()
 export class PostService {
+  constructor(private afs: AngularFirestore) {
 
-
-public posts: Post[] = [
-   ];
-
-
+  }
 
  getPosts() {
-return this.posts;
- }
+  return this.afs.collection('posts', ref => ref .orderBy('creation_date', 'desc')).snapshotChanges(); }
 
-
-
- pushPost(p: Post) {
-   this.posts.unshift(p);
- }
 }

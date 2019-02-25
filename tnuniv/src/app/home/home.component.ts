@@ -13,7 +13,16 @@ export class HomeComponent implements OnInit {
   constructor(private postserv: PostService) { }
 
   ngOnInit() {
-    this.postar = this.postserv.getPosts();
+    this.postserv.getPosts().subscribe(data => {
+      this.postar = data.map(e => {
+
+        return {
+          post_id: e.payload.doc.id,
+          ...e.payload.doc.data()
+        } as Post;
+      });
+    });
+
     console.log(this.postar);
   }
 

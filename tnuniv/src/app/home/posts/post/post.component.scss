@@ -3,7 +3,7 @@
 .post-card {
     background-color: white;
     border-radius: 5px;
-    width: 80%;
+    width: 535px;
     color: $color-text-dark-1;
     position: relative;
     margin-left: 2rem;
@@ -64,6 +64,10 @@
         font-size: 1.5rem;
         color: rgb(61, 61, 63);
         margin-bottom: 3rem;
+    }
+    &__pic {
+        width: 133.75px;
+        height: 133.75px
     }
 }
 

@@ -2,7 +2,7 @@
     <div class="add-post-card__title">Make Post</div>
     <form class="add-post-card__form" (submit)="onAddPost(postform)" #postform="ngForm">
 
-        <textarea rows="1" wrap="soft" class="add-post-card__form__input" placeholder="Share Something" name="content" ngModel></textarea>
+        <textarea rows="1" wrap="soft" class="add-post-card__form__input" placeholder="Share Something" name="content" ngModel required></textarea>
 
         <div class="buttom-menu">
             <img (click)="url2.splice(i, 1)" *ngFor='let url of url2 ; let i = index' id="blah" [src]="url" />
