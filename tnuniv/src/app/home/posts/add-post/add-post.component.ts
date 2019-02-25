@@ -84,6 +84,7 @@ onSelectFile(event: any) {
 onAddPost(form: NgForm) {
 
 if (form.value.content !== '') {
+
   const p: Post = {
     post_id:this.firestore.createId(),
     creation_date: firebase.firestore.FieldValue.serverTimestamp(),
