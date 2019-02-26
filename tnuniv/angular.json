@@ -27,6 +27,7 @@
                             "src/assets"
                         ],
                         "styles": [
+                            "src/sass/animate.css",
                             "node_modules/bootstrap/dist/css/bootstrap.min.css",
                             "src/sass/styles.scss"
                         ],

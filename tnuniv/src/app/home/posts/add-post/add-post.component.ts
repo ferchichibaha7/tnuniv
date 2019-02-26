@@ -18,6 +18,7 @@ export class AddPostComponent implements OnInit {
   pics = [];
   p: Post;
   t: any;
+  pictures: any[];
 
   constructor(private postserv: PostService,
               private firestore: AngularFirestore, ) {
@@ -86,7 +87,8 @@ onAddPost(form: NgForm) {
 if (form.value.content !== '') {
 
   const p: Post = {
-    post_id:this.firestore.createId(),
+
+    post_id: this.firestore.createId(),
     creation_date: firebase.firestore.FieldValue.serverTimestamp(),
     content: form.value.content,
 

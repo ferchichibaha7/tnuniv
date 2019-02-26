@@ -1,4 +1,4 @@
-<div class="post-card clearfix">
+<div class="post-card clearfix  ">
     <div class="post-card__title">java</div>
     <hr id="line">
     <div class="post-card__header">
@@ -16,6 +16,10 @@
     <div class="post-card__main">
         {{p.content}}
     </div>
+    <div class="post-card__pictures">
+        <img class="post-card__pic" *ngFor='let pic of p.pictures ; let i = index' id="blah" [src]="pic" />
+    </div>
+
     <div class="post-card__pics">
 
 

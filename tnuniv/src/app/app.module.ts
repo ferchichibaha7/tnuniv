@@ -18,7 +18,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule} from '@angular/fire/database';
 import { environment } from '../environments/environment';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { AngularFirestoreModule, FirestoreSettingsToken } from '@angular/fire/firestore';
+import { FirestoreSettingsToken } from '@angular/fire/firestore';
 
 
 
@@ -49,7 +49,7 @@ import { AngularFirestoreModule, FirestoreSettingsToken } from '@angular/fire/fi
 
   ],
   entryComponents: [DialogeComponent],
-  providers: [PostService,AngularFirestore, { provide: FirestoreSettingsToken, useValue: {} }],
+  providers: [PostService, AngularFirestore, { provide: FirestoreSettingsToken, useValue: {} }],
   bootstrap: [AppComponent, ]
 })
 export class AppModule { }
