@@ -17,7 +17,7 @@ export class AddPostComponent implements OnInit {
   url1 = [];
   pics = [];
   p: Post;
-  t: any;
+  tcc: any;
   pictures: any[];
 
   constructor(private postserv: PostService,
