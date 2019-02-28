@@ -5,7 +5,6 @@ import {PostService } from '../post.service';
 import { Post } from '../post.model';
 import { AngularFirestore } from '@angular/fire/firestore';
 import * as firebase from 'firebase/app';
-import 'firebase/database';
 declare var $: any;
 @Component({
   selector: 'app-add-post',
@@ -47,10 +46,13 @@ export class AddPostComponent implements OnInit {
       target.hide();
  }
   });
-// hide and show Post button
+
+  // show Post button
    if (this.url2.length === 0 ) {
   $('#blah').hide(); }
 }
+
+
 onSelectFile(event: any) {
   if (event.target.files && event.target.files[0]) {
       const filesAmount = event.target.files.length;
@@ -82,6 +84,7 @@ onSelectFile(event: any) {
          }
 }
 
+
 onAddPost(form: NgForm) {
 
 if (form.value.content !== '') {
@@ -101,13 +104,6 @@ if (form.value.content !== '') {
   form.value.content = '';
 
 }
-
-
-
-
-
-
-
 
 }
 
