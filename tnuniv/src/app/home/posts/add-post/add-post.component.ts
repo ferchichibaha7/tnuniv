@@ -97,7 +97,6 @@ if (form.value.content !== '') {
 
     };
 
-
   this.firestore.collection('posts').add(p);
   $('.add-post-card__form__input').val('');
   $('.add-post-card__form__input').height(23);
